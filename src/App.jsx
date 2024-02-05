@@ -1,9 +1,14 @@
-import { useState } from "react";
+
 import "./App.css";
+import dog from "./assets/doggo.gif";
 
 function App() {
   
-  return (<h1>Hello world</h1>)
+  return (
+  <div>
+    <h1>Hello world</h1>
+    <img src={dog} alt="A cute dog" />
+  </div>)
 }
 
 export default App;
