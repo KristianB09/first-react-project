@@ -46,6 +46,9 @@ function Card() {
           card.imageUrl && (
             <div key={index} className="card-container">
               <img key={index} src={card.imageUrl} alt={card.name} />
+              <div className="text-beneath-card">
+                <p>- {card.name} -</p>
+              </div>
             </div>
           )
       )}
