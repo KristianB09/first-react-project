@@ -42,10 +42,10 @@ function Card() {
   return (
     <div className="cards-container">
       {cards.map(
-        (card, index) =>
+        (card) =>
           card.imageUrl && (
-            <div key={index} className="card-container">
-              <img key={index} src={card.imageUrl} alt={card.name} />
+            <div key={card.id} className="card-container">
+              <img key={card.id} src={card.imageUrl} alt={card.name} />
               <div className="text-beneath-card">
                 <p>- {card.name} -</p>
               </div>
