@@ -49,6 +49,8 @@ function Card() {
               <img src={card.image_uris.normal} alt={card.name} />
               <div className="text-beneath-card">
                 <p>- {card.name} -</p>
+                <p className="not-first-p">Artist: {card.artist}</p>
+                <p className="not-first-p">Rarity: {card.rarity}</p>
               </div>
             </div>
           )

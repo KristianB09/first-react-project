@@ -31,3 +31,7 @@
   padding-top: 16px;
   padding-bottom: 5px;
 }
+
+.text-beneath-card .not-first-p {
+  padding-top: 3px;
+}
