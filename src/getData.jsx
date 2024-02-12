@@ -5,7 +5,16 @@ let mtgUrl = "https://api.magicthegathering.io/v1/cards";
 
 let mtgList = [];
 
-getData();
+let scryfallList = [];
+
+const scryfallUrl = "https://api.scryfall.com/cards/random";
+
+async function scryfallData() {
+  scryfallList = await getData(scryfallUrl);
+  console.log(scryfallList.name);
+}
+
+scryfallData();
 
 async function getData(url = mtgUrl) {
   const response = await fetch(url);
