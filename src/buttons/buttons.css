@@ -1,0 +1,32 @@
+.buttons-container {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  z-index: 2;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.buttons-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  width: 70px;
+  height: 70px;
+  border-radius: 500px;
+  background-color: hsl(220, 32%, 33%);
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-shadow: 1px 2px 8px 0px rgba(35, 35, 35, 0.51);
+}
+
+.buttons-container button img {
+  height: 50px;
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(281deg)
+    brightness(104%) contrast(101%);
+}
