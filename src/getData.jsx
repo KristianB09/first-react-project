@@ -7,11 +7,12 @@ let mtgList = [];
 
 let scryfallList = [];
 
-const scryfallUrl = "https://api.scryfall.com/cards/random";
+const scryfallUrl = "https://api.scryfall.com/sets/mkm";
 
 async function scryfallData() {
   scryfallList = await getData(scryfallUrl);
-  console.log(scryfallList.name);
+  const scryfallSet = await getData(scryfallList.search_uri);
+  console.log(scryfallSet);
 }
 
 scryfallData();
