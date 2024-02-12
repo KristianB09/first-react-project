@@ -12,6 +12,7 @@
 
 .card-container img {
   border-radius: 10px;
+  max-width: 20rem;
 }
 
 .text-beneath-card {

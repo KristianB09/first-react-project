@@ -1,23 +1,16 @@
 import { useState, useEffect } from "react";
 import "./getData.css";
 
-let mtgUrl = "https://api.magicthegathering.io/v1/cards";
-
-let mtgList = [];
-
 let scryfallList = [];
 
 const scryfallUrl = "https://api.scryfall.com/sets/mkm";
 
-async function scryfallData() {
-  scryfallList = await getData(scryfallUrl);
-  const scryfallSet = await getData(scryfallList.search_uri);
-  console.log(scryfallSet);
+async function scryfallData(url) {
+  scryfallList = await getData(url);
+  return await getData(scryfallList.search_uri);
 }
 
-scryfallData();
-
-async function getData(url = mtgUrl) {
+async function getData(url = scryfallUrl) {
   const response = await fetch(url);
   if (response.ok !== true) {
     console.log("Something went wrong");
@@ -28,18 +21,15 @@ async function getData(url = mtgUrl) {
   return data;
 }
 
-async function updateMtgList(url) {
-  mtgList = await getData(url);
-}
-
 function Card() {
   const [cards, setCards] = useState([]);
 
   useEffect(() => {
     async function fetchCards() {
-      await updateMtgList(mtgUrl);
-      if (mtgList.cards) {
-        setCards(mtgList.cards);
+      const cardData = await scryfallData(scryfallUrl);
+      if (cardData.data) {
+        setCards(cardData.data);
+        console.log(cardData.data);
       }
     }
 
@@ -53,9 +43,9 @@ function Card() {
     <div className="cards-container">
       {cards.map(
         (card) =>
-          card.imageUrl && (
+          card.image_uris.normal && (
             <div key={card.id} className="card-container">
-              <img key={card.id} src={card.imageUrl} alt={card.name} />
+              <img src={card.image_uris.normal} alt={card.name} />
               <div className="text-beneath-card">
                 <p>- {card.name} -</p>
               </div>
