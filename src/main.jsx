@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Navbar from "./navbar.jsx";
+import Navbar from "./navbar/navbar.jsx";
 import "./index.css";
-import Card from "./getData.jsx";
+import Card from "./getData/getData.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

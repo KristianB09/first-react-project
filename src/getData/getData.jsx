@@ -43,7 +43,8 @@ function Card() {
     <div className="cards-container">
       {cards.map(
         (card) =>
-          card.image_uris.normal && (
+          card.image_uris.normal &&
+          card.booster && (
             <div key={card.id} className="card-container">
               <img src={card.image_uris.normal} alt={card.name} />
               <div className="text-beneath-card">
