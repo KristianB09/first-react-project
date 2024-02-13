@@ -19,11 +19,14 @@
   position: relative;
   top: -1rem;
   background-color: hsl(0, 0%, 100%);
-  border: 2px black solid;
+  border-bottom: 2px hsl(0, 0%, 10%) solid;
+  border-left: 1px lightgrey solid;
+  border-right: 1px lightgrey solid;
   z-index: -1;
   border-radius: 4px;
   text-align: left;
   text-indent: 15px;
+  max-width: 17rem;
 }
 
 .text-beneath-card p {
