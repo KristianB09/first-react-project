@@ -37,7 +37,7 @@ function Card() {
   }, []);
 
   if (cards.length === 0) {
-    return <p>Loading...</p>;
+    return <p className="loading">Loading...</p>;
   }
   return (
     <div className="cards-container">
