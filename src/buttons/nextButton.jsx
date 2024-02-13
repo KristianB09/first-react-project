@@ -1,5 +1,5 @@
 import "./buttons.css";
-import arrowRight from "./assets/arrow-right.svg";
+import arrowRight from "../assets/arrow-right.svg";
 function NextButton() {
   return (
     <button>

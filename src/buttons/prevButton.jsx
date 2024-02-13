@@ -1,5 +1,5 @@
 import "./buttons.css";
-import arrowLeft from "./assets/arrow-left.svg";
+import arrowLeft from "../assets/arrow-left.svg";
 
 function PrevButton() {
   return (
