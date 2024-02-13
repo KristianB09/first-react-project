@@ -6,7 +6,7 @@ nav {
   justify-content: center;
   z-index: 2;
   background-color: #324261;
-  height: 75px;
+  height: 70px;
 }
 
 .mtg-card-viewer-header {
@@ -25,7 +25,7 @@ nav {
   background-color: #324261;
   align-items: center;
   justify-content: space-between;
-  height: 75px;
+  height: 70px;
   margin-bottom: 5rem;
 }
 
