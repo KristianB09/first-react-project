@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "../assets/logo.svg";
+import logo from "./assets/logo.svg";
 
 function Navbar() {
   return (
