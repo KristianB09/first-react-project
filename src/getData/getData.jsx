@@ -48,9 +48,13 @@ function Card() {
             <div key={card.id} className="card-container">
               <img src={card.image_uris.normal} alt={card.name} />
               <div className="text-beneath-card">
-                <p>- {card.name} -</p>
-                <p className="not-first-p">Artist: {card.artist}</p>
-                <p className="not-first-p">Rarity: {card.rarity}</p>
+                <p className="first-p">- {card.name} -</p>
+                <p className="not-first-p odd-p">
+                  <b>Artist:</b> {card.artist}
+                </p>
+                <p className="not-first-p">
+                  <b>Rarity:</b> {card.rarity}
+                </p>
               </div>
             </div>
           )
