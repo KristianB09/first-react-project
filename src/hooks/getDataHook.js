@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
+import { scryfallUrl } from "../data/variables.js";
 
 let scryfallList = [];
-
-const scryfallUrl = "https://api.scryfall.com/sets/mkm";
 
 async function scryfallData(url) {
   scryfallList = await getData(url);
@@ -31,7 +30,7 @@ export function useParseData() {
         const cardData = await scryfallData(scryfallUrl);
         if (cardData.data) {
           setCards(cardData.data);
-          console.log(cardData.data);
+          console.log(cardData);
         }
       } catch (error) {
         setError(error.message);
