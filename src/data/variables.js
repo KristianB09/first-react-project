@@ -1,4 +1,4 @@
 // Variables
-let currentSet = "mkm";
+export let currentSet = "mkm";
 
-export const scryfallUrl = `https://api.scryfall.com/sets/${currentSet}`;
+export let scryfallUrl = `https://api.scryfall.com/sets/${currentSet}`;
