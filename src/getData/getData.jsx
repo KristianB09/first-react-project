@@ -1,44 +1,17 @@
-import { useState, useEffect } from "react";
+import { useParseData } from "../hooks/getDataHook.js";
 import "./getData.css";
 
-let scryfallList = [];
-
-const scryfallUrl = "https://api.scryfall.com/sets/mkm";
-
-async function scryfallData(url) {
-  scryfallList = await getData(url);
-  return await getData(scryfallList.search_uri);
-}
-
-async function getData(url = scryfallUrl) {
-  const response = await fetch(url);
-  if (response.ok !== true) {
-    console.log("Something went wrong");
-  }
-
-  const data = await response.json();
-
-  return data;
-}
-
 function Card() {
-  const [cards, setCards] = useState([]);
+  const { cards, loading, error } = useParseData();
 
-  useEffect(() => {
-    async function fetchCards() {
-      const cardData = await scryfallData(scryfallUrl);
-      if (cardData.data) {
-        setCards(cardData.data);
-        console.log(cardData.data);
-      }
-    }
-
-    fetchCards();
-  }, []);
-
-  if (cards.length === 0) {
+  if (loading) {
     return <p className="loading">Loading...</p>;
   }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <div className="cards-container">
       {cards.map(
