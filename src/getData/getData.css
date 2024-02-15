@@ -54,4 +54,7 @@
   text-align: center;
   font-size: 2rem;
   font-family: "Lato";
+  background-color: lightgrey;
+  padding: 1rem;
+  border-radius: 8px;
 }
