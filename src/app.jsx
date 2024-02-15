@@ -5,7 +5,7 @@ import CombineButtons from "./buttons/combineButtons.jsx";
 
 function App() {
   return (
-    <scryfallListContext.Provider>
+    <scryfallListContext.Provider value={[]}>
       <Navbar />
       <CombineButtons />
       <Card />
