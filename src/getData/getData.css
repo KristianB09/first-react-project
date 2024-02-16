@@ -67,6 +67,7 @@
   z-index: 3;
   background-color: white;
   border-radius: 10px;
+  box-shadow: 1px 2px 8px 0px rgba(35, 35, 35, 0.51);
 }
 
 .overlay-content {
@@ -79,8 +80,22 @@
 }
 
 .details-container {
-  padding: 0.5rem;
+  padding-top: 0.5rem;
   margin: 1.5rem;
   border-top: 2px black solid;
+  border-bottom: 2px black solid;
+  border-left: 1px lightgrey solid;
+  border-right: 1px lightgrey solid;
   border-radius: 3px;
+}
+
+.details-container p {
+  font-family: "Lato";
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top: lightgrey 1px solid;
+}
+
+.details-container h1 {
+  font-family: "Lato";
 }
