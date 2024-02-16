@@ -58,3 +58,29 @@
   padding: 1rem;
   border-radius: 8px;
 }
+
+.overlay-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.overlay-content {
+  display: flex;
+}
+
+.overlay-content img {
+  border-radius: 10px;
+  max-width: 17rem;
+}
+
+.details-container {
+  padding: 0.5rem;
+  margin: 1.5rem;
+  border-top: 2px black solid;
+  border-radius: 3px;
+}
