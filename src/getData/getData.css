@@ -13,6 +13,7 @@
 .card-container img {
   border-radius: 10px;
   max-width: 17rem;
+  cursor: pointer;
 }
 
 .text-beneath-card {
@@ -85,11 +86,12 @@
 
 .overlay-content img {
   border-radius: 10px;
-  max-width: 17rem;
+  max-width: 20rem;
 }
 
 .details-container {
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   margin: 1.5rem;
   border-top: 2px black solid;
   border-bottom: 2px black solid;
@@ -100,19 +102,25 @@
 
 .details-container p {
   font-family: "Lato";
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-top: lightgrey 1px solid;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .details-container pre {
   font-family: "Lato";
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-top: lightgrey 1px solid;
   white-space: pre-line;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .details-container h1 {
   font-family: "Lato";
+  padding-left: 10px;
+  padding-right: 10px;
 }
