@@ -1,5 +1,5 @@
 import { useParseData } from "../hooks/getDataHook.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./getData.css";
 
 function Card() {
@@ -7,9 +7,23 @@ function Card() {
   const [overlayCard, setOverlayCard] = useState(null);
 
   function cardClick(card) {
-    console.log(card);
-    setOverlayCard(card);
+    if (!overlayCard) {
+      setOverlayCard(card);
+    }
   }
+
+  useEffect(() => {
+    function closeOverlay(event) {
+      if (overlayCard && !event.target.closest(".overlay-container")) {
+        setOverlayCard(null);
+      }
+    }
+    document.addEventListener("mousedown", closeOverlay);
+
+    return () => {
+      document.removeEventListener("mousedown", closeOverlay);
+    };
+  }, [overlayCard]);
 
   if (loading) {
     return <p className="loading">Loading...</p>;
@@ -46,17 +60,19 @@ function Card() {
           )
       )}
       {overlayCard && (
-        <div className="overlay-container">
-          <div className="overlay-content">
-            <img src={overlayCard.image_uris.normal} alt={overlayCard.name} />
-            <div className="details-container">
-              <h1>{overlayCard.name}</h1>
-              <p>{overlayCard.type_line}</p>
-              <p>{overlayCard.oracle_text}</p>
-              <p>
-                {overlayCard.power} / {overlayCard.toughness}
-              </p>
-              <p>{overlayCard.artist}</p>
+        <div className="screen-clicker-overlay">
+          <div className="overlay-container">
+            <div className="overlay-content">
+              <img src={overlayCard.image_uris.normal} alt={overlayCard.name} />
+              <div className="details-container">
+                <h1>{overlayCard.name}</h1>
+                <p>{overlayCard.type_line}</p>
+                <pre>{overlayCard.oracle_text}</pre>
+                <p>
+                  {overlayCard.power} / {overlayCard.toughness}
+                </p>
+                <p>{overlayCard.artist}</p>
+              </div>
             </div>
           </div>
         </div>

@@ -66,8 +66,17 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   background-color: white;
+  min-width: 700px;
   border-radius: 10px;
-  box-shadow: 1px 2px 8px 0px rgba(35, 35, 35, 0.51);
+}
+
+.screen-clicker-overlay {
+  background-color: rgba(35, 35, 35, 0.51);
+  top: 0;
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+  height: 100%;
 }
 
 .overlay-content {
@@ -94,6 +103,14 @@
   padding-top: 3px;
   padding-bottom: 3px;
   border-top: lightgrey 1px solid;
+}
+
+.details-container pre {
+  font-family: "Lato";
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-top: lightgrey 1px solid;
+  white-space: pre-line;
 }
 
 .details-container h1 {
