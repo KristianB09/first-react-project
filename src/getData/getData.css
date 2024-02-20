@@ -109,15 +109,6 @@
   padding-right: 10px;
 }
 
-.details-container pre {
-  font-family: "Lato";
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border-top: lightgrey 1px solid;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .details-container .oracle-text {
   white-space: pre-line;
 }

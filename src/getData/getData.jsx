@@ -73,9 +73,9 @@ function Card() {
                   {overlayCard.power} / {overlayCard.toughness}
                 </p>
                 <p>{overlayCard.artist}</p>
-                <pre>
+                <p>
                   <i>{overlayCard.flavor_text}</i>
-                </pre>
+                </p>
               </div>
             </div>
           </div>

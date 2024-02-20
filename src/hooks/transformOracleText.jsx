@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import "../getData/getData.css";
 
 export function OracleText({ oracleText }) {
   if (typeof oracleText !== "string") {
