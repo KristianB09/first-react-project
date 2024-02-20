@@ -1,3 +1,4 @@
 export function transformOracleText(oracleText) {
-  return oracleText.replace(/\n/g, "\n\n");
+  const oracleTextReplaced = oracleText.replace(/\n/g, "\n\n");
+  return oracleTextReplaced;
 }

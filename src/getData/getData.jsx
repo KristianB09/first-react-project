@@ -68,7 +68,9 @@ function Card() {
               <div className="details-container">
                 <h1>{overlayCard.name}</h1>
                 <p>{overlayCard.type_line}</p>
-                <pre>{transformOracleText(overlayCard.oracle_text)}</pre>
+                <p className="oracle-text">
+                  {transformOracleText(overlayCard.oracle_text)}
+                </p>
                 <p>
                   {overlayCard.power} / {overlayCard.toughness}
                 </p>
