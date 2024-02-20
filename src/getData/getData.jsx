@@ -1,7 +1,7 @@
 import { useParseData } from "../hooks/getDataHook.js";
 import { useState, useEffect } from "react";
 import "./getData.css";
-import { transformOracleText } from "../hooks/transformOracleText.js";
+import { OracleText } from "../hooks/transformOracleText.jsx";
 
 function Card() {
   const { cards, loading, error } = useParseData();
@@ -68,9 +68,7 @@ function Card() {
               <div className="details-container">
                 <h1>{overlayCard.name}</h1>
                 <p>{overlayCard.type_line}</p>
-                <p className="oracle-text">
-                  {transformOracleText(overlayCard.oracle_text)}
-                </p>
+                <OracleText oracleText={overlayCard.oracle_text} />
                 <p>
                   {overlayCard.power} / {overlayCard.toughness}
                 </p>
