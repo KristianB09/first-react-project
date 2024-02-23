@@ -1,0 +1,23 @@
+.sets-button {
+  background-color: #324261;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: "Lato";
+  color: white;
+  font-size: 18px;
+  padding: 5px 20px;
+  border-radius: 4px;
+  transition: 0.1s ease-in-out;
+}
+
+.sets-button:hover {
+  background-color: hsl(220, 32%, 39%);
+}
+
+.sets-button img {
+  width: 33px;
+  margin-right: 5px;
+}

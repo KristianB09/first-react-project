@@ -1,5 +1,6 @@
 import "./navbar.css";
 import logo from "../assets/logo.svg";
+import SetsButton from "../buttons/navbarButtons/setsButton.jsx";
 
 function Navbar() {
   return (
@@ -9,6 +10,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
           <h1 className="mtg-card-viewer-header">MTG card viewer</h1>
         </div>
+        <SetsButton />
       </div>
     </nav>
   );
