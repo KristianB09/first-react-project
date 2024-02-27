@@ -3,12 +3,12 @@ import { scryfallUrl } from "../data/variables.js";
 
 let scryfallList = [];
 
-export async function scryfallData(url) {
+async function scryfallData(url) {
   scryfallList = await getData(url);
   return scryfallList;
 }
 
-export async function getData(url = scryfallUrl) {
+async function getData(url = scryfallUrl) {
   const response = await fetch(url);
   if (response.ok !== true) {
     throw new Error("Data fetch failed");
