@@ -1,4 +1,4 @@
-import { useCards } from "../context/paginationContext.jsx";
+import { useCards } from "../context/useCards.js";
 import { useState, useEffect } from "react";
 import "./Cards.css";
 import { OracleText } from "../hooks/transformOracleText.jsx";

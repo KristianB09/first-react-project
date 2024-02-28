@@ -1,8 +1,8 @@
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 import { useParseData } from "../hooks/getDataHook.js";
 import PropTypes from "prop-types";
 
-const CardsContext = createContext({
+export const CardsContext = createContext({
   cards: [],
   loading: true,
   error: null,
@@ -15,10 +15,6 @@ export function CardsProvider({ children }) {
   return (
     <CardsContext.Provider value={cards}>{children}</CardsContext.Provider>
   );
-}
-
-export function useCards() {
-  return useContext(CardsContext);
 }
 
 CardsProvider.propTypes = {

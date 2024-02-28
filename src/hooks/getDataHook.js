@@ -3,7 +3,7 @@ import { scryfallUrl } from "../data/variables.js";
 
 let scryfallList = [];
 
-async function scryfallData(url) {
+export async function scryfallData(url) {
   scryfallList = await getData(url);
   return scryfallList;
 }
@@ -27,6 +27,7 @@ export function useParseData() {
   const [hasMore, setHasMore] = useState(false);
   const [nextPageUrl, setNextPageUrl] = useState(null);
   const [setName, setSetName] = useState(null);
+
   /* const [sets, setSets] = useState([]); */
 
   useEffect(() => {

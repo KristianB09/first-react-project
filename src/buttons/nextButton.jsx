@@ -1,6 +1,6 @@
 import "./buttons.css";
 import arrowRight from "../assets/arrow-right.svg";
-import { useCards } from "../context/paginationContext.jsx";
+import { useCards } from "../context/useCards.js";
 
 function NextButton() {
   const { nextPage } = useCards();
