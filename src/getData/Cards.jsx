@@ -1,10 +1,10 @@
-import { useParseData } from "../hooks/getDataHook.js";
+import { useCards } from "../context/paginationContext.jsx";
 import { useState, useEffect } from "react";
-import "./getData.css";
+import "./Cards.css";
 import { OracleText } from "../hooks/transformOracleText.jsx";
 
 function Card() {
-  const { cards, loading, error } = useParseData();
+  const { cards, loading, error, setName } = useCards();
   const [overlayCard, setOverlayCard] = useState(null);
 
   function cardClick(card) {
@@ -36,6 +36,9 @@ function Card() {
 
   return (
     <div className="cards-container">
+      <div className="set-name-container">
+        <h4 className="set-name">{setName}</h4>
+      </div>
       {cards.map(
         (card) =>
           card.image_uris.normal &&

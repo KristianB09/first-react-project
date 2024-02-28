@@ -26,6 +26,7 @@ export function useParseData() {
   const [currentUrl, setCurrentUrl] = useState(scryfallUrl);
   const [hasMore, setHasMore] = useState(false);
   const [nextPageUrl, setNextPageUrl] = useState(null);
+  const [setName, setSetName] = useState(null);
   /* const [sets, setSets] = useState([]); */
 
   useEffect(() => {
@@ -38,7 +39,9 @@ export function useParseData() {
         const cardData = await scryfallData(currentUrl);
 
         if (cardData.data) {
+          setSetName(cardData.data[1].set_name);
           setCards(cardData.data);
+
           if (cardData.has_more) {
             setHasMore(true);
             setNextPageUrl(cardData.next_page);
@@ -61,5 +64,5 @@ export function useParseData() {
     }
   }
 
-  return { cards, loading, error, nextPage };
+  return { cards, loading, error, nextPage, setName };
 }
