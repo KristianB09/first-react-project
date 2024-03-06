@@ -1,0 +1,19 @@
+.search-bar {
+  position: absolute;
+  left: 330px;
+  width: 20%;
+  height: 40px;
+  text-indent: 20px;
+  font-family: "Lato";
+  font-weight: 400;
+  border: none;
+  background-color: #324261;
+  color: white;
+  border-left: 1px solid white;
+  outline: none;
+}
+
+.search-bar::placeholder {
+  color: hsl(0, 0%, 80%);
+  font-family: "Lato";
+}
